@@ -1,0 +1,220 @@
+
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(14, 13, 13);
+}
+
+.App-header {
+  background-color: rgb(14, 13, 13);
+  width: 100vw;
+  height: 15vh;
+  padding: 20px;
+  color: white;
+}
+
+.name {
+  font-size: 2em;
+  color: white;
+  letter-spacing: .2em;
+}
+
+.App-nav {
+  list-style: none;
+}
+
+.App-nav > li {
+  display: inline-block;
+  margin: 40px;
+  letter-spacing: .5em;
+  color: gray;
+}
+
+.App-nav > li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.active {
+  color: white !important;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+
+/*------------------------------------------- Home ----------------------------------------------*/
+.App-home {
+  padding: 10vw;
+  background-color: rgb(14, 13, 13);
+  width: 100vw;
+  display: block;
+}
+
+.homeImg {
+  height: 350px;
+  margin-right: 15vw;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.homeText {
+  width: 400px;
+  display: inline-block;
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: .2em;
+  margin-top: 10vh;
+}
+
+/*-------------------------------------------- Shows ----------------------------------------*/
+.App-shows {
+  background-color: rgba(0,0,0,0);
+  color: white;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 100vw;
+  display: block;
+}
+
+.showList {
+  list-style: none;
+}
+
+.showList > li {
+  display: inline-block;
+  width: 95vw;
+  margin: 0px;
+}
+
+.showItem {
+  display: inline-block;
+  border-bottom: 1px solid white;
+  padding: 25px;
+}
+
+.showItem > h3, button {
+  color: white;
+  margin-right: 10vw;
+  display: inline-block;
+}
+
+.showItem > button {
+  cursor: pointer;
+  background-color: rgba(0,0,0,0);
+  border: 2px solid white;
+  color: white;
+  width: 125px;
+  height: 50px;
+}
+
+.showItem > button:hover {
+  color: black;
+  background-color: white;
+}
+
+/*------------------------------------------- About ----------------------------------------------*/
+.App-about {
+  padding: 10vw;
+  background-color: rgb(14, 13, 13);
+  display: block;
+  color: white;
+}
+
+.aboutImg {
+  width: 250px;
+  margin-right: 15vw;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.aboutText {
+  width: 450px;
+  margin-top: 17px;
+  display: inline-block;
+  color: white;
+  font-size: 1.3em;
+  letter-spacing: .2em;
+  text-align: right;
+}
+
+/*------------------------------------------- Contact --------------------------------------------*/
+.App-contact {
+  align-content: center;
+  height: 95vh;
+  padding: 10vw;
+  background-color: rgb(14, 13, 13);
+  color: white;
+  display: block;
+  padding-bottom: 25px;
+}
+
+.contact {
+  margin-bottom: 25px!important;
+}
+
+.social{
+  margin-bottom: 35px;
+  width: 50vw;
+  margin-left: 17vw;
+}
+
+.social:hover {
+  cursor: pointer;
+}
+
+.social > a {
+  color: white;
+  margin-right: 3vw;
+  font-size: 1.5em;
+}
+
+.social:hover > a {
+  color: gray;
+}
+
+.social > a:hover {
+  color: white;
+  cursor: pointer
+}
+
+form {
+  width: 50vw;
+  margin-left: 15.5vw;
+}
+
+form > div> input {
+  width: 24vw
+}
+
+form > div> input:first-child {
+  margin-right: 2vw !important;
+}
+
+input, textarea {
+  border-radius: 2.5px;
+  border: none;
+  margin-bottom: 25px!important;
+  color: default;
+  height: 35px;
+}
+
+textarea {
+  width: 50vw;
+  height: 25vh;
+}
+
+#subject {
+  width: 50vw;
+}
+
+#submit {
+  background-color: rgb(14, 13, 13);
+  border: 3px solid white;
+  color: white;
+  width: 75px;
+  height: 50px;
+}
