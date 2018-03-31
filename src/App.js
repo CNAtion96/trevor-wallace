@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import homeImg from './home_img.jpg';
 import aboutImg from './about_img.jpg';
+import Scrollchor from 'react-scrollchor';
 
 class App extends Component {
   constructor(props) {
@@ -66,16 +67,24 @@ class App extends Component {
           <h1 className="name">Trevor Wallace</h1>
           <ul className="App-nav">
             <li className={this.state.navActive[0]}>
-              Home
+              <Scrollchor to="" className="nav-link">
+                Home
+              </Scrollchor>
             </li>
             <li className={this.state.navActive[1]}>
-              Shows
+              <Scrollchor to="#shows" className="nav-link">
+                Shows
+              </Scrollchor>
             </li>
             <li className={this.state.navActive[2]}>
-              About
+              <Scrollchor to="#about" className="nav-link">
+                About
+              </Scrollchor>
             </li>
             <li className={this.state.navActive[3]}>
-              Contact
+              <Scrollchor to="#contact" className="nav-link">
+                Contact
+              </Scrollchor>
             </li>
           </ul>
         </header>
@@ -88,8 +97,8 @@ class App extends Component {
             </p>
           </div>
         </div>
-        <div className="App-shows">
-        <h1 className="title"> Upcoming Shows </h1>
+        <div className="App-shows" id="shows">
+          <h1 className="title"> Upcoming Shows </h1>
           <ul className="showList">
             <li>
               <div className="showItem">
@@ -129,8 +138,8 @@ class App extends Component {
             </li>
           </ul>
         </div>
-        <div className="App-about">
-        <h1 className="title"> About </h1>
+        <div className="App-about" id="about">
+          <h1 className="title"> About </h1>
           <img className="aboutImg" src={aboutImg} alt=""/>
           <div className="aboutText">
             <p>
@@ -141,7 +150,7 @@ class App extends Component {
             </p>
           </div>
         </div>
-        <div className="App-contact">
+        <div className="App-contact" id="contact">
           <h1 className="title contact"> Contact </h1>
           <div className="social">
             <a href="#" target="_blank">
