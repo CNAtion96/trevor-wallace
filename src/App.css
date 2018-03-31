@@ -4,7 +4,6 @@
   text-align: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0,0,0,0.3);
 }
 
 .App-header {
@@ -12,6 +11,7 @@
   height: 15vh;
   padding: 20px;
   color: white;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .name {
@@ -50,6 +50,7 @@
   padding: 10vw;
   width: 100vw;
   display: block;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .homeImg {
@@ -128,7 +129,7 @@
 }
 
 .aboutText {
-  width: 450px;
+  width: 400px;
   margin-top: 17px;
   display: inline-block;
   color: white;
@@ -212,4 +213,79 @@ textarea {
   color: white;
   width: 75px;
   height: 50px;
+}
+
+/*-------------------------------------------Breakpoints----------------------------------------*/
+
+@media(max-width: 1050px){
+  .homeImg{
+    margin-right: 10vw;
+  }
+  .aboutImg{
+    margin-right: 10vw;
+  }
+}
+
+@media(max-width: 975px){
+  .homeImg{
+    margin-right: 0;
+    margin-left: 5vw;
+  }
+  .aboutImg{
+    margin-right: 0;
+    margin-left: 5vw;
+  }
+  
+  .aboutText{
+    text-align: center;
+    margin-left: 2vw;
+  }
+}
+
+@media(max-width: 800px){
+  .App-nav > li {
+    margin: 20px;
+  }
+
+  .homeImg{
+    margin-right: 5vw;
+  }
+
+  .aboutImg{
+    margin-right: 5vw;
+  }
+  
+}
+
+@media(max-width: 575px){
+  .App-nav {
+    margin-left: 0;
+  }
+  .App-nav > li {
+    margin: 5px;
+    letter-spacing: 2px;
+  }
+
+  .homeText {
+    width: 250px;
+    font-size: 1em;
+  }
+
+  .showItem {
+    margin-left: 0;
+  }
+
+  .showItem > h3 {
+    font-size: 1em;
+  }
+  
+  .showItem > button {
+    width: 125px;
+    height: 30px;
+  }
+
+  .aboutText {
+    width: 250px;
+    font-size: 1em;
+  }
 }
