@@ -23,6 +23,11 @@ div {
   letter-spacing: .2em;
 }
 
+.twistedImg {
+  height: 50px;
+  margin-left: 5px;
+}
+
 .App-nav {
   list-style: none;
 }
@@ -31,12 +36,14 @@ div {
   display: inline-block;
   margin: 40px;
   letter-spacing: .5em;
-  color: gray;
 }
 
-.App-nav > li:hover {
-  cursor: pointer;
-  color: white;
+.App-nav > li > .nav-link {
+  color: gray !important;
+}
+
+.App-nav > li > .nav-link:hover {
+  color: white !important;
 }
 
 .active {
