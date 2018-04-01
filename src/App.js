@@ -11,28 +11,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      navItems: [
-        {
-          name: 'Home',
-          key: 0,
-          scrollChor: ''
-        },
-        {
-          name: 'Shows',
-          key: 1,
-          scrollChor: '#shows'
-        },
-        {
-          name: 'About',
-          key: 2,
-          scrollChor: '#about'
-        },
-        {
-          name: 'Contact',
-          key: 3,
-          scrollChor: '#contact'
-        }
-      ],
       navActive: [
         'active nav-link',
         'nav-link',
@@ -42,52 +20,59 @@ class App extends Component {
     };
   }
 
-  navigate(i) {
+  navigate(i){
     if(i === 0){
       this.setState({
         navActive: [
-          'active',
-          '',
-          '',
-          ''
+          'active nav-link',
+          'nav-link',
+          'nav-link',
+          'nav-link'
         ]
       });
+      console.log('homeActive');
     }
     if(i === 1){
       this.setState({
         navActive: [
-          '',
-          'active',
-          '',
-          ''
+          'nav-link',
+          'active nav-link',
+          'nav-link',
+          'nav-link'
         ]
       });
+      console.log('showsActive');
     }
     if(i === 2){
       this.setState({
         navActive: [
-          '',
-          '',
-          'active',
-          ''
+          'nav-link',
+          'nav-link',
+          'active nav-link',
+          'nav-link'
         ]
       });
+      console.log('aboutActive');
     }
     if(i === 3){
       this.setState({
         navActive: [
-          '',
-          '',
-          '',
-          'active'
+          'nav-link',
+          'nav-link',
+          'nav-link',
+          'active nav-link'
         ]
       });
+      console.log('contactActive');
     }
   }
+  
   render() {
+
+    
     return (
       <div className="App">
-        <Header navItems={this.state.navItems} activeNav={this.state.navActive}/>
+        <Header />
         <Home />
         <Shows />
         <About />

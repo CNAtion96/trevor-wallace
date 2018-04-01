@@ -39,14 +39,14 @@ div {
 }
 
 .App-nav > li > .nav-link {
-  color: gray !important;
+  color: gray ;
 }
 
 .App-nav > li > .nav-link:hover {
   color: white !important;
 }
 
-.active {
+.App-nav > li > .active {
   color: white !important;
 }
 

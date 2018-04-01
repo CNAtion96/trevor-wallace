@@ -1,38 +1,78 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import twistedImg from '../assests/images/twisted.png';
-import Scrollchor from 'react-scrollchor';
+import NavItem from './NavItem';
 
-const Header = (props) => {
-
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            navItems: [
+                {
+                  name: 'Home',
+                  key: 0,
+                  scrollChor: '',
+                },
+                {
+                  name: 'Shows',
+                  key: 1,
+                  scrollChor: '#shows',
+                },
+                {
+                  name: 'About',
+                  key: 2,
+                  scrollChor: '#about',
+                },
+                {
+                  name: 'Contact',
+                  key: 3,
+                  scrollChor: '#contact',
+                }
+              ],
+            activeLink: 'Home'
+        };
+    }
     
 
-    return(
-        <header className="App-header">
-            <h1 className="name">Trevor<img src={twistedImg} className="twistedImg"/> Wallace</h1>
-            <ul className="App-nav">
-                <li>
-                    <Scrollchor to="" className="nav-link">
-                        Home
-                    </Scrollchor>
-                </li>
-                <li>
-                    <Scrollchor to="#shows"  className="nav-link">
-                        Shows
-                    </Scrollchor>
-                </li>
-                <li>
-                    <Scrollchor to="#about"  className="nav-link">
-                        About
-                    </Scrollchor>
-                </li>
-                <li>
-                    <Scrollchor to="#contact"  className="nav-link">
-                        Contact
-                    </Scrollchor>
-                </li>
-            </ul>
-        </header>
-    )
+    setActive = (link) => this.setState({active: link});
+    
+    
+    render(){
+        
+        let navList = this.state.navItems.map( (navItem) => {
+            let isActive = this.state.activeLink === navItem.name;
+            let navClass = isActive ? 'active nav-link' : 'nav-link';
+            return(
+                <NavItem 
+                    key={navItem.key}
+                    name={navItem.name}
+                    scrollChor={navItem.scrollChor}
+                    navClass={navClass}
+                    setActive={this.setActive}
+                />
+            )
+        });
+        
+
+        return(
+            <header className="App-header">
+                <h1 className="name">
+                    Trevor<img src={twistedImg} className="twistedImg" alt=""/> Wallace
+                </h1>
+                <ul className="App-nav">
+                    { navList }
+                </ul>
+            </header>
+        )
+    }
 }
 
-export default Header;
+export default Header; 
+
+// let path = window.location.pathname;
+
+//     const changePath = (newPath) => {
+//         path = window.location.pathname + newPath;
+//         console.log(path);
+//     }
+
