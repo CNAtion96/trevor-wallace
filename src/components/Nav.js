@@ -2,7 +2,7 @@ import React from 'react';
 import Scrollchor from 'react-scrollchor';
 
 const NavItems = [{
-    target: "",
+    target: "#",
     text: "Home"
 },{
     target: "#shows",
@@ -42,8 +42,7 @@ const NavItem = props => {
 
     return (
         <li className={className}>
-            <Scrollchor className={className}
-                        to={props.target}
+            <Scrollchor to={props.target}
                         afterAnimate={() => props.onClick(props.target)}>
                 {props.text}
             </Scrollchor>
