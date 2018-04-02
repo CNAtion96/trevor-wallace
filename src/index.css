@@ -3,17 +3,5 @@ body {
   padding: 0;
   font-family: sans-serif;
   width: 100vw;
-  /* background-image: url('./assests/images/bg_img.jpg'); */
-  background-size: cover;
-  background-repeat: none;
-  background-position: center;
-  background-attachment: fixed;
   overflow: hidden;
-}
-
-
-@media(max-width: 800px){
-  body {
-    /* background-image: url('./assests/images/bg_imgS.png'); */
-  }
 }
