@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import twistedImg from '../assests/images/twisted.png';
 import Nav from './Nav';
