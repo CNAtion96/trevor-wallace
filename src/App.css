@@ -91,12 +91,14 @@ div {
 /*-------------------------------------------- Shows ----------------------------------------*/
 .App-shows {
   color: white;
+  margin-left: 0;
   margin-top: 5vh;
   width: 100vw;
   display: block;
 }
 
 .showList {
+  margin: 0;
   list-style: none;
 }
 
@@ -109,7 +111,6 @@ div {
 .showItem {
   display: inline-block;
   border-bottom: 1px solid white;
-  padding: 25px;
   text-align: left;
 }
 
