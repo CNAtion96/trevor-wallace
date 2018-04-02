@@ -115,6 +115,7 @@ div {
   display: inline-block;
   border-bottom: 1px solid white;
   text-align: left;
+  padding-bottom: 10px;
 }
 
 .showItem > h3, button {
