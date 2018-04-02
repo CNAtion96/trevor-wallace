@@ -11,7 +11,7 @@ body {
 }
 
 
-@media(max-width: 1000px){
+@media(max-width: 800px){
   body {
     background-image: url('./assests/images/bg_imgS.png');
   }
