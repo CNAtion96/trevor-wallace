@@ -236,6 +236,13 @@ textarea {
   color: white;
   width: 75px;
   height: 50px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  color: black;
+  background-color: white;
+  transition: all .3s;
 }
 
 /*-------------------------------------------Breakpoints----------------------------------------*/
