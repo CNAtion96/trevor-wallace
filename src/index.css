@@ -13,6 +13,6 @@ body {
 
 @media(max-width: 800px){
   body {
-    background-image: url('./assests/images/bg_imgS.png');
+    background: none;
   }
 }
