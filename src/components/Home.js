@@ -5,7 +5,7 @@ class Home extends Component {
 
     render() {
         return(
-            <div className="App-home">
+            <div className="App-home" id="home">
                 <img className="homeImg" src={homeImg} alt=""/>
                 <div className="homeText">
                     <p>

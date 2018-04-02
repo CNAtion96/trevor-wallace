@@ -11,68 +11,56 @@ class App extends Component {
     super(props);
 
     this.state = {
-      navActive: [
-        'active nav-link',
-        'nav-link',
-        'nav-link',
-        'nav-link'
-      ]
+      navItems: [
+          {
+            name: 'Home',
+            key: 0,
+            scrollChor: '#home',
+          },
+          {
+            name: 'Shows',
+            key: 1,
+            scrollChor: '#shows',
+          },
+          {
+            name: 'About',
+            key: 2,
+            scrollChor: '#about',
+          },
+          {
+            name: 'Contact',
+            key: 3,
+            scrollChor: '#contact',
+          }
+        ],
+        activeLink: 'Home',
+        isOpen: false
     };
   }
 
-  navigate(i){
-    if(i === 0){
-      this.setState({
-        navActive: [
-          'active nav-link',
-          'nav-link',
-          'nav-link',
-          'nav-link'
-        ]
-      });
-      console.log('homeActive');
-    }
-    if(i === 1){
-      this.setState({
-        navActive: [
-          'nav-link',
-          'active nav-link',
-          'nav-link',
-          'nav-link'
-        ]
-      });
-      console.log('showsActive');
-    }
-    if(i === 2){
-      this.setState({
-        navActive: [
-          'nav-link',
-          'nav-link',
-          'active nav-link',
-          'nav-link'
-        ]
-      });
-      console.log('aboutActive');
-    }
-    if(i === 3){
-      this.setState({
-        navActive: [
-          'nav-link',
-          'nav-link',
-          'nav-link',
-          'active nav-link'
-        ]
-      });
-      console.log('contactActive');
-    }
+  onNavItemClick = (link) => {
+    this.setState({activeLink: link});
+    console.log(this.state.activeLink);
+  }
+
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
   }
   
   render() {
 
     
     return (
-      <div className="App">
-        <Header />
+      <div className="App container-fluid">
+        <Header 
+          onClick={this.onNavItemClick}
+          navItems={this.state.navItems}
+          activeLink={this.state.activeLink}
+          toggle={this.toggle}
+          isOpen={this.state.isOpen}
+        />
         <Home />
         <Shows />
         <About />

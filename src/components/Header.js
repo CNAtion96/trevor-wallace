@@ -1,78 +1,36 @@
-import React, {Component} from 'react';
+import React from 'react';
 import twistedImg from '../assests/images/twisted.png';
-import NavItem from './NavItem';
+import NavLink from './NavLink';
+import {Row, Col} from 'reactstrap';
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = {
-            navItems: [
-                {
-                  name: 'Home',
-                  key: 0,
-                  scrollChor: '',
-                },
-                {
-                  name: 'Shows',
-                  key: 1,
-                  scrollChor: '#shows',
-                },
-                {
-                  name: 'About',
-                  key: 2,
-                  scrollChor: '#about',
-                },
-                {
-                  name: 'Contact',
-                  key: 3,
-                  scrollChor: '#contact',
-                }
-              ],
-            activeLink: 'Home'
-        };
-    }
-    
+const Header = (props) => {
 
-    setActive = (link) => this.setState({active: link});
-    
-    
-    render(){
-        
-        let navList = this.state.navItems.map( (navItem) => {
-            let isActive = this.state.activeLink === navItem.name;
-            let navClass = isActive ? 'active nav-link' : 'nav-link';
-            return(
-                <NavItem 
-                    key={navItem.key}
-                    name={navItem.name}
-                    scrollChor={navItem.scrollChor}
-                    navClass={navClass}
-                    setActive={this.setActive}
-                />
-            )
-        });
-        
-
+    let navList = props.navItems.map( (data) => {
+        let isActive = props.activeLink === data.name;
+        console.log(isActive);
+        let navClass = isActive ? 'active nav-link col-sm-4' : 'nav-link col-sm-4';
         return(
-            <header className="App-header">
-                <h1 className="name">
-                    Trevor<img src={twistedImg} className="twistedImg" alt=""/> Wallace
-                </h1>
-                <ul className="App-nav">
-                    { navList }
-                </ul>
-            </header>
+            <NavLink
+                key={data.key}
+                name={data.name}
+                scrollChor={data.scrollChor}
+                navClass={navClass}
+                onClick={props.onClick}
+            />
         )
-    }
+    })
+    
+    return(
+        <header className="App-header col-sm-12">
+            
+            <h1 className="name col-sm-12">
+                Trevor <img src={twistedImg} className="twistedImg" alt=""/> Wallace
+            </h1>
+            <ul className="App-nav col-sm-12">
+                { navList }
+            </ul>
+        </header>
+    )
 }
 
 export default Header; 
-
-// let path = window.location.pathname;
-
-//     const changePath = (newPath) => {
-//         path = window.location.pathname + newPath;
-//         console.log(path);
-//     }
-

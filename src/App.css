@@ -3,6 +3,11 @@ div {
   margin: 0;
 }
 
+.container-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .App {
   text-align: center;
   height: 100vh;
@@ -25,33 +30,37 @@ div {
 
 .twistedImg {
   height: 50px;
-  margin-left: 5px;
 }
 
 .App-nav {
   list-style: none;
 }
 
-.App-nav > li {
+.App-nav > button {
   display: inline-block;
-  margin: 40px;
   letter-spacing: .5em;
+  border: none;
+  background-color: rgba(0,0,0,0);
 }
 
-.App-nav > li > .nav-link {
+.App-nav > button > .nav-link {
   color: gray ;
 }
 
-.App-nav > li > .nav-link:hover {
+.App-nav > button > .nav-link:hover {
   color: white !important;
 }
 
-.App-nav > li > .active {
+.App-nav > button > .active {
   color: white !important;
 }
 
 .title {
   margin-bottom: 50px;
+}
+
+.scrollHeader {
+  background-color: rgba(0,0,0,0.7);
 }
 
 
@@ -101,11 +110,11 @@ div {
   display: inline-block;
   border-bottom: 1px solid white;
   padding: 25px;
+  text-align: left;
 }
 
 .showItem > h3, button {
   color: white;
-  margin-right: 10vw;
   display: inline-block;
 }
 
@@ -121,6 +130,7 @@ div {
 .showItem > button:hover {
   color: black;
   background-color: white;
+  transition: all .3s;
 }
 
 /*------------------------------------------- About ----------------------------------------------*/
@@ -250,11 +260,17 @@ textarea {
     text-align: center;
     margin-left: 2vw;
   }
+  .showItem{
+    text-align: center;
+  }
 }
 
-@media(max-width: 800px){
-  .App-nav > li {
-    margin: 20px;
+@media(max-width: 850px){
+  .App-nav > button {
+    display: inline-block;
+    letter-spacing: .2em;
+    border: none;
+    background-color: rgba(0,0,0,0);
   }
 
   .homeImg{
@@ -264,6 +280,10 @@ textarea {
   .aboutImg{
     margin-right: 5vw;
   }
+
+  .showItem > div {
+    display: none;
+  }
   
 }
 
@@ -271,14 +291,20 @@ textarea {
   .App-nav {
     padding-left: 0;
   }
-  .App-nav > li {
-    margin: 5px;
-    letter-spacing: 2px;
+  .App-nav > button {
+    display: inline-block;
+    letter-spacing: .1em;
+    margin-right: 0px;
+    border: none;
+    background-color: rgba(0,0,0,0);
   }
 
   .homeText {
     width: 250px;
     font-size: 1em;
+  }
+  .homeImg {
+    margin-top: 25px;
   }
 
   .showItem {
@@ -298,5 +324,18 @@ textarea {
   .aboutText {
     width: 250px;
     font-size: 1em;
+  }
+}
+
+@media(max-width: 485px) {
+  .name{
+    font-size: 1.75em;
+  }
+  .twistedImg{
+    height: 40px;
+  }
+  .App-nav > button {
+    font-size: .75em;
+    padding: 0;
   }
 }
